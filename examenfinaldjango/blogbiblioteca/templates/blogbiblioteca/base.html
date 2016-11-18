@@ -1,0 +1,25 @@
+{% load staticfiles %}
+    <html>
+        <head>
+            <title>blog</title>
+            <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+            <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+            <link href='//fonts.googleapis.com/css?family=Lobster&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+            <link rel="stylesheet" href="{% static 'css/blog.css' %}">
+        </head>
+        <body>
+       <div class="page-header">
+         <a href="{% url 'blogbiblioteca.views.post_new' %}" class="top-menu"><span class="glyphicon glyphicon-plus"></span>Nuevo Libro</a>
+           <h1><a href="/">Biblioteca</a></h1>
+
+       </div>
+       <div class="content container">
+           <div class="row">
+               <div class="col-md-12">
+               {% block content %}
+               {% endblock %}
+               </div>
+           </div>
+       </div>
+   </body>
+    </html>
